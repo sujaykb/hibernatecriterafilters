@@ -15,8 +15,8 @@ Core features and goals:
 
 = Examples =
 
-[Easy Filter Example Page] - Quick example of code that must be written
-[Multi Table Filter Example Page] - A much more advanced example, involving table join lookups.
-[Easy Sort Example Page] - Quick example of code that must be written
-[Multi Table Sort Example Page] - A much more advanced example, involving table join lookups.
-[Pagination Example Page] - Quick example of code that must be written
+ * [Easy Filter Example Page] - Quick example of code that must be written
+ * [Multi Table Filter Example Page] - A much more advanced example, involving table join lookups.
+ * [Easy Sort Example Page] - Quick example of code that must be written
+ * [Multi Table Sort Example Page] - A much more advanced example, involving table join lookups.
+ * [Pagination Example Page] - Quick example of code that must be written
