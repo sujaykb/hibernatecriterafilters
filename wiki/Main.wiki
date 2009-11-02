@@ -1,13 +1,22 @@
-#summary One-sentence summary of this page.
+#summary What is this Project
 
 = Introduction =
 
-Add your content here.
+This project it meant to simplify and decouple integration between a view level class and the Hibernate calls that power the page. This is one of those things that should have been in Hibernate since at one point in time, almost all developers need this functionality but its not supplied by Hibernate itself.
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Core features and goals:
+  * Easy to use and extend
+  * The view code should never have to know any database specifics
+  * The Database DAO's should never have to know magic names of the front end logic.
+
+
+= Examples =
+
+[Easy Filter Example Page] - Quick example of code that must be written
+[Multi Table Filter Example Page] - A much more advanced example, involving table join lookups.
+[Easy Sort Example Page] - Quick example of code that must be written
+[Multi Table Sort Example Page] - A much more advanced example, involving table join lookups.
+[Pagination Example Page] - Quick example of code that must be written
