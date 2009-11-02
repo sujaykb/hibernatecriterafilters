@@ -1,0 +1,58 @@
+#summary Basic Filter Example
+
+= Introduction =
+
+This gives you the information to write a basic filer. 
+
+The SQL to go with this code is as follows 
+
+{{{
+create table product (product_id int not null autonumber, sku_value varchar(50), price float);
+}}}
+
+[Conditions] is a type of condition "equals", "contains" etc. 
+
+= Details =
+
+Your Filter Code:
+{{{
+public class InventoryFilteringHelper extends FilteringHelper {
+    private final static Logger log = Logger.getLogger(InventoryFilteringHelper.class);
+
+    // adds a filter for filtering on the product.sku_value field in the database. 
+    // condition can be any of the normal conditions provided by the filter classes 
+    public void setSku(String value, String condition) {
+        // fetch the condition 
+        BaseCondition bc = ConditionFactory.buldCondition(condition);
+
+        bc.setStringValue(value);   // The value to filter on 
+        bc.setFieldName("skuValue"); // this is the Hiberate field name of the table to filter
+        bc.setClazz(Product.class); // the Hibernate table class 
+
+        super.addCondtions(bc);
+    }
+
+}
+}}}
+
+Your Database Access Code (this example uses spring):
+{{{
+public class ProductsDaoImpl extends BaseHibernateDao implements ProductsInfoDao {
+    private final static Logger LOGGER = Logger.getLogger(ProductsInfoDAOImpl.class);
+
+    @SuppressWarnings("unchecked")
+    public List<Product> getFilteredProduts( final FilteringHelper fh) {
+        return (List< Product >) getHibernateTemplate().execute(new HibernateCallback() {
+            public Object doInHibernate(Session session) throws HibernateException, SQLException {
+                Criteria c = session.createCriteria(Products.class);
+                if (fh != null) {
+                    c = fh.filterIt(c, null, Products.class); // applies the filters to the criteria
+                }
+                return c.list();
+            }
+        });
+    }
+
+}
+
+}}}
