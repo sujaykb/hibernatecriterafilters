@@ -1,0 +1,31 @@
+#summary Valid Conditions that can be used
+
+= Introduction =
+
+Conditions are the core of the filtering. 
+
+
+= Details =
+
+Conditions can be any of the following (these are from the _BaseCondition_ class):
+ * public static final String EQUALS_CONDITION       = "EqualsCondition";
+ * public static final String NOT_EQUAL_CONDITION    = "NotEqualCondition";
+ * public static final String CONTAINS_CONDITION     = "ContainsCondition";
+ * public static final String BETWEEN_CONDITION      = "BetweenCondtion";
+ * public static final String BEGINS_WITH_CONDITION  = "BeginsWithCondtion";
+ * public static final String ENDS_WITH_CONDITION    = "EndsWithCondtion";
+ * public static final String LESS_THAN_CONDITION    = "LessThanCondtion";
+ * public static final String GREATER_THAN_CONDITION = "GreaterThanCondtion";
+ * public static final String GREATER_THAN_OR_EQUAL_CONDITION = "GreaterThanOrEqualCondtion";
+ * public static final String LESS_THAN_OR_EQUAL_CONDITION    = "LessThanOrEqualCondtion";
+
+ * public static final String EQUALS_CONDITION_SHORT       = "eq";
+ * public static final String NOT_EQUAL_CONDITION_SHORT    = "ne";
+ * public static final String CONTAINS_CONDITION_SHORT     = "ct";
+ * public static final String BETWEEN_CONDITION_SHORT      = "bt";
+ * public static final String BEGINS_WITH_CONDITION_SHORT  = "bw";
+ * public static final String ENDS_WITH_CONDITION_SHORT    = "ew";
+ * public static final String LESS_THAN_CONDITION_SHORT    = "lt";
+ * public static final String GREATER_THAN_CONDITION_SHORT = "gt";
+ * public static final String GREATER_THAN_OR_EQUAL_CONDITION_SHORT = "ge";
+ * public static final String LESS_THAN_OR_EQUAL_CONDITION_SHORT    = "le";
